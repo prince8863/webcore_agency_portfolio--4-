@@ -1,0 +1,23 @@
+{
+  "name": "webcore-agency-portfolio",
+  "version": "1.0.0",
+  "description": "High-Performance Agency Portfolio Website engineered for web design and development agencies",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve -l 8000 .",
+    "start": "npx serve -l 8000 .",
+    "build": "echo 'Static production assets ready in root directory.'"
+  },
+  "keywords": [
+    "agency-portfolio",
+    "tailwind-css",
+    "healthcare-website",
+    "dental-clinic",
+    "gynecology-clinic"
+  ],
+  "author": "WEBCORE STUDIOS",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

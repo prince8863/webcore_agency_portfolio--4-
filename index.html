@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WEBCORE STUDIOS — High-Performance Web Design &amp; Digital Engineering Agency</title>
+  <meta name="description" content="Design-led, performance-focused web design and development agency. We craft bespoke high-conversion websites for modern businesses, medical clinics, and healthcare practices.">
+  <meta name="keywords" content="web design agency, web development, clinic websites, dental website design, gynecology website design, healthcare web design, Next.js development">
+  <meta name="author" content="WEBCORE STUDIOS">
+  <meta name="theme-color" content="#0B0D12">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://webcorestudios.io/">
+  <meta property="og:title" content="WEBCORE STUDIOS — Bespoke Web Design &amp; Development">
+  <meta property="og:description" content="Bespoke high-conversion digital experiences that turn visitors into clients. Healthcare practices, dental surgeries, and specialized clinics.">
+  <meta property="og:image" content="assets/images/projects/dr-sandesh-dental.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WEBCORE STUDIOS — Digital Architecture &amp; Web Design">
+  <meta name="twitter:description" content="Design-led, performance-focused websites that grow your business. Engineered for speed and conversion authority.">
+  <meta name="twitter:image" content="assets/images/projects/dr-sandesh-dental.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+  <!-- Typography & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "canvas-base": "#0B0D12",
+            "background": "#0B0D12",
+            "surface": "#111318",
+            "surface-dim": "#111318",
+            "surface-bright": "#37393F",
+            "surface-container-lowest": "#0C0E13",
+            "surface-container-low": "#1A1B21",
+            "surface-container": "#1E1F25",
+            "surface-container-high": "#282A2F",
+            "surface-container-highest": "#33353A",
+            "surface-variant": "#33353A",
+            "on-surface": "#E2E2E9",
+            "on-surface-variant": "#C2C6D6",
+            "on-background": "#E2E2E9",
+            "primary": "#ADC6FF",
+            "on-primary": "#002E6A",
+            "primary-container": "#4D8EFF",
+            "on-primary-container": "#00285D",
+            "primary-fixed": "#D8E2FF",
+            "primary-fixed-dim": "#ADC6FF",
+            "secondary": "#D0BCFF",
+            "on-secondary": "#3C0091",
+            "secondary-container": "#571BC1",
+            "on-secondary-container": "#C4ABFF",
+            "tertiary": "#4CD7F6",
+            "on-tertiary": "#003640",
+            "tertiary-container": "#009EB9",
+            "error": "#FFB4AB",
+            "on-error": "#690005",
+            "outline": "#8C909F",
+            "outline-variant": "#424754"
+          },
+          fontFamily: {
+            "display": ["Space Grotesk", "sans-serif"],
+            "headline-xl": ["Space Grotesk", "sans-serif"],
+            "headline-lg": ["Space Grotesk", "sans-serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "label-md": ["Space Grotesk", "sans-serif"],
+            "label-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"]
+          },
+          fontSize: {
+            "display": ["72px", { lineHeight: "80px", letterSpacing: "-0.04em", fontWeight: "600" }],
+            "display-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.03em", fontWeight: "600" }],
+            "headline-xl": ["48px", { lineHeight: "56px", letterSpacing: "-0.03em", fontWeight: "500" }],
+            "headline-xl-mobile": ["30px", { lineHeight: "38px", letterSpacing: "-0.02em", fontWeight: "500" }],
+            "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "500" }],
+            "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.015em", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400" }],
+            "body-md": ["15px", { lineHeight: "24px", letterSpacing: "0em", fontWeight: "400" }],
+            "body-sm": ["13px", { lineHeight: "20px", letterSpacing: "0.005em", fontWeight: "400" }],
+            "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "500" }],
+            "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "600" }]
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-2xl": "4rem",
+            "space-3xl": "6rem"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Design System Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "WEBCORE STUDIOS",
+    "description": "High-Performance Web Design and Digital Engineering Agency specializing in healthcare, clinics, and ambitious digital businesses.",
+    "url": "https://webcorestudios.io/",
+    "serviceType": [
+      "Website Design",
+      "Website Development",
+      "Healthcare Web Portals",
+      "Dental Website Design",
+      "Gynecology Clinic Portals",
+      "Website Redesign and Optimization"
+    ],
+    "priceRange": "$$$$"
+  }
+  </script>
+</head>
+
+<body class="bg-canvas-base font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- GLOBAL STICKY NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/70 backdrop-blur-xl border-b border-white/5 transition-all duration-300">
+    <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a class="flex items-center gap-space-sm group focus:outline-none" href="#" aria-label="WEBCORE STUDIOS Home">
+        <span class="w-2.5 h-2.5 rounded-full bg-tertiary transition-transform duration-300 group-hover:scale-125 shadow-[0_0_12px_#06B6D4]"></span>
+        <span class="font-headline-md text-headline-md tracking-tight text-on-surface uppercase font-bold">
+          WEBCORE<span class="text-on-surface-variant font-normal ml-space-xs">/ STUDIOS</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Center Floating Pills -->
+      <nav class="hidden md:flex items-center gap-1 bg-surface-container-low/80 p-1.5 rounded-full border border-white/10 shadow-lg backdrop-blur-md" aria-label="Main Navigation">
+        <a class="nav-link font-label-md text-label-md uppercase tracking-wider text-on-surface px-space-md py-space-xs rounded-full bg-surface-container-high transition-all duration-200" href="#services">Services</a>
+        <a class="nav-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-md py-space-xs rounded-full transition-all duration-200" href="#portfolio">Work</a>
+        <a class="nav-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-md py-space-xs rounded-full transition-all duration-200" href="#process">Process</a>
+        <a class="nav-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-md py-space-xs rounded-full transition-all duration-200" href="#about">About</a>
+        <a class="nav-link font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface hover:bg-surface-container px-space-md py-space-xs rounded-full transition-all duration-200" href="#contact">Contact</a>
+      </nav>
+
+      <!-- Desktop Header Actions -->
+      <div class="hidden sm:flex items-center gap-space-md">
+        <!-- Direct WhatsApp Concierge Button -->
+        <a class="inline-flex items-center gap-1.5 text-xs font-label-sm uppercase tracking-wider text-tertiary hover:text-white px-3 py-1.5 rounded-full bg-tertiary/10 border border-tertiary/20 hover:border-tertiary/50 transition-all duration-200" 
+           data-action="whatsapp" 
+           href="https://wa.me/15550192834" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Chat on WhatsApp Concierge">
+          <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+          <span>WhatsApp</span>
+        </a>
+
+        <!-- Let's Talk CTA -->
+        <a class="inline-flex items-center justify-center font-label-md text-label-md uppercase tracking-wider bg-primary text-on-primary hover:bg-primary-fixed hover:text-on-primary-fixed px-space-lg py-space-sm rounded-full transition-all duration-300 shadow-[0_0_24px_rgba(173,198,255,0.25)] hover:shadow-[0_0_32px_rgba(173,198,255,0.45)] hover:-translate-y-0.5" href="#contact">
+          <span>Let's Talk</span>
+          <span class="material-symbols-outlined text-[16px] ml-1">north_east</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobileMenuToggle" class="md:hidden flex items-center justify-center w-11 h-11 rounded-lg bg-surface-container-low text-on-surface border border-white/10 hover:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary transition-colors" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mobileDrawer">
+        <span class="material-symbols-outlined text-[24px]">menu</span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER & BACKDROP -->
+  <div id="mobileBackdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
+  
+  <aside id="mobileDrawer" class="mobile-drawer fixed top-0 right-0 bottom-0 w-[300px] max-w-[85vw] bg-surface-container-lowest border-l border-white/10 z-50 p-6 flex flex-col justify-between md:hidden shadow-2xl" aria-label="Mobile Navigation Menu">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+          <span class="font-headline-md text-lg tracking-tight uppercase text-on-surface">WEBCORE</span>
+        </div>
+        <button id="mobileDrawerClose" class="w-9 h-9 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary" aria-label="Close Navigation Menu">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-2 mt-6" aria-label="Mobile Navigation Links">
+        <a class="mobile-nav-link p-3 rounded-lg text-on-surface hover:bg-surface-container font-label-md uppercase tracking-wider text-sm flex items-center justify-between transition-colors" href="#services">
+          <span>Services</span>
+          <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link p-3 rounded-lg text-on-surface hover:bg-surface-container font-label-md uppercase tracking-wider text-sm flex items-center justify-between transition-colors" href="#portfolio">
+          <span>Selected Work</span>
+          <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link p-3 rounded-lg text-on-surface hover:bg-surface-container font-label-md uppercase tracking-wider text-sm flex items-center justify-between transition-colors" href="#process">
+          <span>Methodology</span>
+          <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link p-3 rounded-lg text-on-surface hover:bg-surface-container font-label-md uppercase tracking-wider text-sm flex items-center justify-between transition-colors" href="#about">
+          <span>Agency Advantage</span>
+          <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+        </a>
+        <a class="mobile-nav-link p-3 rounded-lg text-on-surface hover:bg-surface-container font-label-md uppercase tracking-wider text-sm flex items-center justify-between transition-colors" href="#contact">
+          <span>Contact &amp; Inquiries</span>
+          <span class="material-symbols-outlined text-sm text-on-surface-variant">arrow_forward</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer Bottom Actions -->
+    <div class="pt-6 border-t border-white/10 space-y-3">
+      <a class="w-full py-3 rounded-full bg-primary text-on-primary font-label-md text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg" href="#contact">
+        <span>Start a Project</span>
+        <span class="material-symbols-outlined text-sm">north_east</span>
+      </a>
+      <a class="w-full py-3 rounded-full bg-surface-container text-tertiary border border-tertiary/30 font-label-md text-sm uppercase tracking-wider flex items-center justify-center gap-2" 
+         data-action="whatsapp" 
+         href="https://wa.me/15550192834" 
+         target="_blank" 
+         rel="noopener noreferrer">
+        <span class="material-symbols-outlined text-sm">chat</span>
+        <span>WhatsApp Concierge</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- MAIN PAGE CONTENT -->
+  <main id="main-content" class="w-full pt-20 bg-canvas-base min-h-screen">
+    
+    <!-- HERO SECTION -->
+    <section class="relative w-full overflow-hidden pt-space-xl pb-space-3xl lg:pb-space-3xl">
+      <!-- Atmospheric Ambient Auras -->
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[720px] h-[460px] bg-primary/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+      <div class="absolute top-1/3 left-1/4 -translate-x-1/2 w-[520px] h-[360px] bg-secondary-container/20 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-space-md">
+        
+        <!-- Top Status Tagline -->
+        <div class="flex flex-col items-center text-center max-w-4xl mx-auto reveal">
+          <div class="inline-flex items-center gap-space-sm px-space-md py-space-xs rounded-full bg-surface-container-high/80 border border-white/10 backdrop-blur-md shadow-sm mb-space-lg">
+            <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#06B6D4]"></span>
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Design-led. Performance-focused. Built for growth.</span>
+          </div>
+
+          <!-- Main Display Headline -->
+          <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-display text-on-surface uppercase tracking-tight mb-space-lg leading-[1.1]">
+            WE BUILD WEBSITES THAT <br class="hidden md:inline">
+            <span class="bg-gradient-to-r from-primary via-tertiary to-secondary bg-clip-text text-transparent">
+              GROW YOUR BUSINESS.
+            </span>
+          </h1>
+
+          <!-- Subtext -->
+          <p class="font-body-lg text-base sm:text-body-lg text-on-surface-variant max-w-2xl mb-space-xl leading-relaxed">
+            We design and develop high-performance websites that turn visitors into customers. From healthcare clinics to ambitious brands, we help businesses build an authoritative digital presence.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center justify-center gap-space-md mb-space-2xl">
+            <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-lg hover:shadow-[0_0_30px_rgba(173,198,255,0.4)] transition-all duration-300 transform hover:-translate-y-0.5" href="#portfolio">
+              <span>Explore Our Work</span>
+              <span class="material-symbols-outlined text-[18px]">north_east</span>
+            </a>
+            <a class="inline-flex items-center gap-space-sm px-space-xl py-space-md rounded-full bg-surface-container-high/60 backdrop-blur-md text-on-surface hover:text-primary hover:bg-surface-container-highest border border-white/10 transition-all duration-300 font-label-md text-label-md uppercase tracking-wider" href="#contact">
+              <span>Let's Discuss Your Project</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Layered Interactive Browser Mockups Display (Featuring the 2 Actual Client Websites) -->
+        <div class="relative w-full mt-space-md pt-space-md reveal reveal-delay-2">
+          
+          <!-- Center Primary Showcase: Dr. Sandesh Dental Implant Center -->
+          <div class="relative z-20 max-w-4xl mx-auto rounded-xl overflow-hidden bg-surface-container-low border border-white/15 shadow-2xl shadow-surface-container-lowest/90 transition-transform duration-500 hover:scale-[1.01] cursor-pointer group" 
+               data-project-trigger="dr-sandesh-dental"
+               title="Click to view Dr. Sandesh case study">
+            <!-- Browser Chrome Top Bar -->
+            <div class="bg-surface-container-high/90 px-space-md py-space-sm flex items-center justify-between backdrop-blur-md border-b border-white/5">
+              <div class="flex items-center gap-space-xs">
+                <span class="w-2.5 h-2.5 rounded-full bg-error/70"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-surface-bright"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-outline-variant"></span>
+              </div>
+              <div class="flex items-center gap-space-xs px-space-md py-0.5 rounded-full bg-surface-container-lowest/80 text-on-surface-variant font-label-sm text-label-sm border border-white/5">
+                <span class="material-symbols-outlined text-[12px] text-tertiary">lock</span>
+                <span class="font-mono">drsandeshimplantdentist.com</span>
+              </div>
+              <div class="flex items-center gap-space-xs text-on-surface-variant">
+                <span class="material-symbols-outlined text-[14px]">tune</span>
+                <span class="material-symbols-outlined text-[14px]">share</span>
+              </div>
+            </div>
+
+            <!-- Hero Mockup Frame Content -->
+            <div class="relative aspect-[16/9] w-full bg-surface-container-lowest overflow-hidden">
+              <img alt="Apex Dental Implant Center modern clean healthcare web presence" 
+                   class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" 
+                   src="assets/images/projects/dr-sandesh-dental.png">
+              <div class="absolute bottom-space-md right-space-md bg-surface-container-lowest/85 backdrop-blur-md px-space-md py-space-xs rounded-full flex items-center gap-space-xs border border-white/10 shadow-lg">
+                <span class="w-1.5 h-1.5 rounded-full bg-tertiary shadow-[0_0_8px_#06B6D4]"></span>
+                <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">99.8% Booking Conversion Uplift</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Overlapping Card: Dr. Swapna Women's Clinic Portal -->
+          <div class="hidden lg:block absolute -right-6 top-1/3 z-30 w-80 rounded-xl overflow-hidden bg-surface-container shadow-2xl backdrop-blur-xl border border-white/10 transform rotate-2 hover:rotate-0 transition-transform duration-500 cursor-pointer group"
+               data-project-trigger="dr-swapna-gynecology"
+               title="Click to view Dr. Swapna Gynecology clinic case study">
+            <div class="bg-surface-container-high/80 px-space-sm py-space-xs flex items-center justify-between border-b border-white/5">
+              <span class="font-label-sm text-label-sm text-on-surface uppercase">Aura Clinic Portal</span>
+              <span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+            </div>
+            <div class="aspect-[4/3] bg-surface-container-lowest p-space-sm overflow-hidden">
+              <img alt="Aura Women Clinic refined modern branding and portal" 
+                   class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" 
+                   src="assets/images/projects/dr-swapna-gynecology.png">
+            </div>
+            <div class="px-space-md py-space-sm bg-surface-container-high/50 flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+              <span>Specialist Care</span>
+              <span class="text-primary font-mono">Instant Booking</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BENCHMARKS & TELEMETRY COUNTER SECTION -->
+    <section class="w-full py-space-2xl bg-surface-container-lowest relative border-y border-white/5" aria-label="Performance Benchmarks">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-space-lg text-center md:text-left">
+          
+          <!-- Stat 1 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/50 border border-white/5 backdrop-blur-md flex flex-col justify-between reveal">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary mb-space-sm flex items-center gap-space-xs justify-center md:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary shadow-[0_0_6px_#06B6D4]"></span> 
+              VERIFIED DELIVERIES
+            </span>
+            <div class="font-display text-4xl sm:text-display text-on-surface tracking-tight mb-space-xs">
+              <span data-counter="48" data-suffix="+">48+</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Projects successfully launched and producing active ROI for partners.</p>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/50 border border-white/5 backdrop-blur-md flex flex-col justify-between reveal reveal-delay-1">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary mb-space-sm flex items-center gap-space-xs justify-center md:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_6px_#8B5CF6]"></span> 
+              RETENTION RATE
+            </span>
+            <div class="font-display text-4xl sm:text-display text-on-surface tracking-tight mb-space-xs">
+              <span data-counter="35" data-suffix="+">35+</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Happy recurring clients who retain our design &amp; tech teams quarterly.</p>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/50 border border-white/5 backdrop-blur-md flex flex-col justify-between reveal reveal-delay-2">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary mb-space-sm flex items-center gap-space-xs justify-center md:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_6px_#3B82F6]"></span> 
+              DOMAIN DEPTH
+            </span>
+            <div class="font-display text-4xl sm:text-display text-on-surface tracking-tight mb-space-xs">
+              <span data-counter="12" data-suffix="">12</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Industries served from private healthcare practices to corporate brands.</p>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/50 border border-white/5 backdrop-blur-md flex flex-col justify-between reveal reveal-delay-3">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary mb-space-sm flex items-center gap-space-xs justify-center md:justify-start">
+              <span class="w-1.5 h-1.5 rounded-full bg-tertiary shadow-[0_0_6px_#06B6D4]"></span> 
+              STANDARD OF EXCELLENCE
+            </span>
+            <div class="font-display text-4xl sm:text-display text-on-surface tracking-tight mb-space-xs">
+              <span data-counter="100" data-suffix="%">100%</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Focused on engineered performance, Lighthouse 95+ scores, and visual pedigree.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="w-full py-space-3xl relative" id="services">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md reveal">
+          <div>
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary px-space-md py-space-xs rounded-full bg-surface-container-high border border-white/10 inline-block mb-space-md">
+              OUR EXPERTISE
+            </span>
+            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight max-w-2xl">
+              Everything Your Business Needs to Stand Out Online.
+            </h2>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+            Tailored engineering and bespoke visual identities built to convert high-value prospects without bloated templates.
+          </p>
+        </div>
+
+        <!-- Service Bento Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+          
+          <!-- Card 1 -->
+          <div class="p-space-xl rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low border border-white/5 hover:border-primary/30 transition-all duration-300 backdrop-blur-xl group reveal">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[28px]">palette</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Website Design</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Beautiful, intuitive, conversion-focused UI/UX designs tailored to each brand. We craft bespoke visual hierarchies that command industry authority.
+            </p>
+            <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+                <span>Bespoke Design Systems &amp; Figma Prototypes</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+                <span>User Journey Mapping &amp; Conversion Architecture</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+                <span>Custom Micro-Interactions &amp; Visual Motion</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="p-space-xl rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low border border-white/5 hover:border-secondary/30 transition-all duration-300 backdrop-blur-xl group reveal reveal-delay-1">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[28px]">code</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Website Development</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Fast, responsive, accessible websites built with modern technologies. We write clean, bulletproof code optimized for speed, search engines, and scale.
+            </p>
+            <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                <span>Next.js, TypeScript &amp; Jamstack Architecture</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                <span>Sub-Second Server-Side &amp; Edge Rendering</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-secondary text-[16px]">check_circle</span>
+                <span>Headless CMS Integration (Sanity, Strapi)</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="p-space-xl rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low border border-white/5 hover:border-tertiary/30 transition-all duration-300 backdrop-blur-xl group reveal">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[28px]">domain</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Business &amp; Clinic Websites</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Professional websites for clinics, practices, startups, and service providers looking to build immediate credibility and acquire leads effortlessly.
+            </p>
+            <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+                <span>Integrated Patient / Client Booking Workflows</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+                <span>Localized SEO &amp; Google Map Presence Calibrations</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-tertiary text-[16px]">check_circle</span>
+                <span>Automated Inquiry Funnels &amp; CRM Routing</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="p-space-xl rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low border border-white/5 hover:border-primary/30 transition-all duration-300 backdrop-blur-xl group reveal reveal-delay-1">
+            <div class="w-12 h-12 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed-dim mb-space-lg group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-[28px]">speed</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-sm">Website Redesign &amp; Optimization</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+              Transform outdated websites into modern digital experiences that perform better. We overhaul visuals, fix bottlenecks, and dramatically enhance speed.
+            </p>
+            <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+                <span>Core Web Vitals &amp; PageSpeed 99+ Audits</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+                <span>UX Audit &amp; Friction Reduction Analysis</span>
+              </li>
+              <li class="flex items-center gap-space-sm">
+                <span class="material-symbols-outlined text-primary text-[16px]">check_circle</span>
+                <span>Full Brand Identity Refresh &amp; Layout Overhauls</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS / PORTFOLIO (Featuring ONLY the 2 Actual Client Websites) -->
+    <section class="w-full py-space-3xl bg-surface-container-lowest relative border-t border-white/5" id="portfolio">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-space-3xl reveal">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-primary px-space-md py-space-xs rounded-full bg-surface-container-high border border-white/10 inline-block mb-space-md">
+            PORTFOLIO
+          </span>
+          <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mb-space-sm">
+            Selected Work. Real Businesses. Better Digital Experiences.
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Case studies in how calibrated creative direction and engineering directly scale consultation bookings and patient trust.
+          </p>
+        </div>
+
+        <div class="space-y-space-3xl">
+          
+          <!-- Project 1: Dr. Sandesh Dental Clinic -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center reveal">
+            <div class="lg:col-span-5 order-2 lg:order-1">
+              <div class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs">
+                <span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_#06B6D4]"></span>
+                <span>Healthcare &amp; Dental Surgery</span>
+              </div>
+              <h3 class="font-headline-lg text-2xl sm:text-headline-lg text-on-surface mb-space-md">
+                Dr. Sandesh — Dental / Implantology Website
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+                Modern, patient-centric web platform featuring seamless consultation scheduling, procedure guides, and high-trust clinic aesthetics. Developed with automated appointment syncing and transparent treatment visualizers.
+              </p>
+              <div class="flex flex-wrap gap-space-xs mb-space-xl">
+                <span class="px-space-md py-space-xs rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface border border-white/5">UI/UX Design</span>
+                <span class="px-space-md py-space-xs rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface border border-white/5">Next.js Development</span>
+                <span class="px-space-md py-space-xs rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface border border-white/5">Patient Booking Flow</span>
+              </div>
+              <div class="flex items-center gap-space-md flex-wrap">
+                <button type="button" 
+                        class="inline-flex items-center gap-space-sm font-label-md text-label-md uppercase tracking-wider text-primary hover:text-tertiary transition-colors group focus:outline-none" 
+                        data-project-trigger="dr-sandesh-dental">
+                  <span>View Case Study</span>
+                  <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+                </button>
+                <a href="https://www.drsandeshimplantdentist.com/" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-label-sm uppercase tracking-wider border border-white/10 transition-colors">
+                  <span>Visit Live Website</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
+            </div>
+            
+            <div class="lg:col-span-7 order-1 lg:order-2">
+              <div class="rounded-xl overflow-hidden bg-surface-container border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-primary/20 cursor-pointer group"
+                   data-project-trigger="dr-sandesh-dental"
+                   title="Click to view Dr. Sandesh case study">
+                <div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between border-b border-white/5">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+                    <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+                    <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-mono">drsandeshimplantdentist.com</span>
+                  <a href="https://www.drsandeshimplantdentist.com/" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors" title="Open live website in new tab" onclick="event.stopPropagation();">
+                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  </a>
+                </div>
+                <div class="aspect-[16/10] w-full bg-surface-container-low overflow-hidden">
+                  <img alt="Apex Dental Implant Center modern clean healthcare web presence" 
+                       class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" 
+                       src="assets/images/projects/dr-sandesh-dental.png">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Dr. Swapna Gynecology Clinic -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center reveal">
+            <div class="lg:col-span-7 order-1">
+              <div class="rounded-xl overflow-hidden bg-surface-container border border-white/10 shadow-2xl transition-all duration-300 hover:shadow-secondary/20 cursor-pointer group"
+                   data-project-trigger="dr-swapna-gynecology"
+                   title="Click to view Dr. Swapna case study">
+                <div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between border-b border-white/5">
+                  <div class="flex items-center gap-space-xs">
+                    <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+                    <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+                    <span class="w-2 h-2 rounded-full bg-surface-variant"></span>
+                  </div>
+                  <span class="font-label-sm text-label-sm text-on-surface-variant font-mono">drswapnagynfertility.com</span>
+                  <a href="https://www.drswapnagynfertility.com/" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-secondary transition-colors" title="Open live website in new tab" onclick="event.stopPropagation();">
+                    <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                  </a>
+                </div>
+                <div class="aspect-[16/10] w-full bg-surface-container-low overflow-hidden">
+                  <img alt="Dr. Swapna Gynecology and Fertility clinic web presence" 
+                       class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" 
+                       src="assets/images/projects/dr-swapna-gynecology.png">
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5 order-2">
+              <div class="flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider mb-space-xs">
+                <span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_#8B5CF6]"></span>
+                <span>Women's Healthcare &amp; Clinic</span>
+              </div>
+              <h3 class="font-headline-lg text-2xl sm:text-headline-lg text-on-surface mb-space-md">
+                Dr. Swapna — Gynecology Website
+              </h3>
+              <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg leading-relaxed">
+                Compassionate, elegant, and warm digital clinic portal built to empower patients with transparent care information and direct appointment booking. Designed with calming earthy aesthetics, zero clinical anxiety, and responsive accessibility.
+              </p>
+              <div class="flex flex-wrap gap-space-xs mb-space-xl">
+                <span class="px-space-md py-space-xs rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface border border-white/5">Brand Identity</span>
+                <span class="px-space-md py-space-xs rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface border border-white/5">Web Design</span>
+                <span class="px-space-md py-space-xs rounded-full bg-surface-container-high font-label-sm text-label-sm text-on-surface border border-white/5">Responsive Development</span>
+              </div>
+              <div class="flex items-center gap-space-md flex-wrap">
+                <button type="button" 
+                        class="inline-flex items-center gap-space-sm font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-tertiary transition-colors group focus:outline-none" 
+                        data-project-trigger="dr-swapna-gynecology">
+                  <span>View Case Study</span>
+                  <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">north_east</span>
+                </button>
+                <a href="https://www.drswapnagynfertility.com/" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-label-sm uppercase tracking-wider border border-white/10 transition-colors">
+                  <span>Visit Live Website</span>
+                  <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- METHODOLOGY / PROCESS SECTION -->
+    <section class="w-full py-space-3xl relative" id="process">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-2xl mx-auto mb-space-3xl reveal">
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary px-space-md py-space-xs rounded-full bg-surface-container-high border border-white/10 inline-block mb-space-md">
+            METHODOLOGY
+          </span>
+          <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mb-space-sm">
+            From First Idea to Final Launch.
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Our straightforward, 4-stage execution model removes guesswork and turns concepts into reality with zero delays.
+          </p>
+        </div>
+
+        <!-- 4 Step Process Timeline -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-space-lg relative">
+          
+          <!-- Step 1 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/70 border border-white/5 backdrop-blur-md relative group hover:bg-surface-container hover:border-primary/30 transition-all reveal">
+            <div class="font-display text-4xl text-surface-bright tracking-tight mb-space-md group-hover:text-primary transition-colors font-bold">
+              01
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Discover</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Understand your business model, customer psychology, core competitors, and clear measurable project goals.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/70 border border-white/5 backdrop-blur-md relative group hover:bg-surface-container hover:border-tertiary/30 transition-all reveal reveal-delay-1">
+            <div class="font-display text-4xl text-surface-bright tracking-tight mb-space-md group-hover:text-tertiary transition-colors font-bold">
+              02
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Design</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Create an unmistakable visual direction, tactile UI architecture, and seamless user paths tailored to your niche.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/70 border border-white/5 backdrop-blur-md relative group hover:bg-surface-container hover:border-secondary/30 transition-all reveal reveal-delay-2">
+            <div class="font-display text-4xl text-surface-bright tracking-tight mb-space-md group-hover:text-secondary transition-colors font-bold">
+              03
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Develop</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Build a responsive, ultra-fast, and reliable website utilizing high-performance frameworks and clean CMS architectures.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="p-space-lg rounded-xl bg-surface-container-low/70 border border-white/5 backdrop-blur-md relative group hover:bg-surface-container hover:border-primary/30 transition-all reveal reveal-delay-3">
+            <div class="font-display text-4xl text-surface-bright tracking-tight mb-space-md group-hover:text-primary transition-colors font-bold">
+              04
+            </div>
+            <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Launch &amp; Support</h3>
+            <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Rigorous cross-device quality assurance, SEO testing, server migration, and hands-on maintenance to scale forward.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US / AGENCY ADVANTAGE SECTION -->
+    <section class="w-full py-space-3xl bg-surface-container-lowest relative border-t border-white/5" id="about">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+          
+          <!-- Left Column: Performance Preview Telemetry Card -->
+          <div class="lg:col-span-5 reveal">
+            <div class="p-space-xl rounded-xl bg-surface-container-low border border-white/10 shadow-2xl relative overflow-hidden">
+              <div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+              
+              <div class="flex items-center justify-between mb-space-lg">
+                <div class="flex items-center gap-space-sm">
+                  <span class="w-3 h-3 rounded-full bg-tertiary shadow-[0_0_8px_#06B6D4]"></span>
+                  <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Lighthouse Engine Audit</span>
+                </div>
+                <span class="font-label-sm text-label-sm text-tertiary px-space-sm py-0.5 rounded bg-tertiary/10 border border-tertiary/20">PASSED</span>
+              </div>
+
+              <!-- Score Circles Grid -->
+              <div class="grid grid-cols-3 gap-space-md text-center mb-space-xl">
+                <div class="p-space-md rounded-lg bg-surface-container border border-white/5">
+                  <div class="font-headline-lg text-headline-lg text-tertiary font-bold">99</div>
+                  <div class="font-label-sm text-label-sm uppercase text-on-surface-variant mt-1">Performance</div>
+                </div>
+                <div class="p-space-md rounded-lg bg-surface-container border border-white/5">
+                  <div class="font-headline-lg text-headline-lg text-primary font-bold">100</div>
+                  <div class="font-label-sm text-label-sm uppercase text-on-surface-variant mt-1">Accessibility</div>
+                </div>
+                <div class="p-space-md rounded-lg bg-surface-container border border-white/5">
+                  <div class="font-headline-lg text-headline-lg text-secondary font-bold">100</div>
+                  <div class="font-label-sm text-label-sm uppercase text-on-surface-variant mt-1">Best SEO</div>
+                </div>
+              </div>
+
+              <!-- Telemetry List -->
+              <div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+                <div class="flex justify-between py-space-xs bg-surface-container-high/40 px-space-md rounded border border-white/5">
+                  <span>Largest Contentful Paint (LCP)</span>
+                  <span class="text-tertiary font-mono font-medium">0.42s</span>
+                </div>
+                <div class="flex justify-between py-space-xs bg-surface-container-high/40 px-space-md rounded border border-white/5">
+                  <span>Cumulative Layout Shift (CLS)</span>
+                  <span class="text-tertiary font-mono font-medium">0.000</span>
+                </div>
+                <div class="flex justify-between py-space-xs bg-surface-container-high/40 px-space-md rounded border border-white/5">
+                  <span>Total Blocking Time (TBT)</span>
+                  <span class="text-tertiary font-mono font-medium">0 ms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: 6 Key Differentiators -->
+          <div class="lg:col-span-7 reveal reveal-delay-1">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary px-space-md py-space-xs rounded-full bg-surface-container-high border border-white/10 inline-block mb-space-md">
+              AGENCY ADVANTAGE
+            </span>
+            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mb-space-xl">
+              Not Just a Website. A Better Way to Grow Online.
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg">
+              
+              <div class="flex items-start gap-space-md">
+                <span class="material-symbols-outlined text-primary text-[24px] mt-0.5">verified</span>
+                <div>
+                  <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs text-[18px]">Tailored Architecture</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Designs built from scratch for each business, avoiding generic prefabricated themes.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md">
+                <span class="material-symbols-outlined text-primary text-[24px] mt-0.5">devices</span>
+                <div>
+                  <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs text-[18px]">Flawless Responsiveness</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Meticulous pixel-level layouts tested seamlessly across mobile, tablet, and widescreen.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md">
+                <span class="material-symbols-outlined text-primary text-[24px] mt-0.5">speed</span>
+                <div>
+                  <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs text-[18px]">Engineered Performance</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Sub-second loading times to stop visitor bounce and maximize search engine rankings.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md">
+                <span class="material-symbols-outlined text-primary text-[24px] mt-0.5">forum</span>
+                <div>
+                  <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs text-[18px]">Clear Communication</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Direct access to your lead designer and engineer with zero account-manager telephone games.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md">
+                <span class="material-symbols-outlined text-primary text-[24px] mt-0.5">rocket_launch</span>
+                <div>
+                  <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs text-[18px]">Future-Proof Foundations</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Built modularly with modern Jamstack &amp; headless APIs so you can expand features effortlessly.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-space-md">
+                <span class="material-symbols-outlined text-primary text-[24px] mt-0.5">shield</span>
+                <div>
+                  <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs text-[18px]">Authority &amp; Trust</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">A polished digital front-door that commands premium rates and wins patient confidence.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CONVERSION SECTION -->
+    <section class="w-full py-space-3xl bg-surface-container-lowest relative border-t border-white/5" id="contact">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl">
+          
+          <!-- Contact Left Column -->
+          <div class="lg:col-span-5 reveal">
+            <span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary px-space-md py-space-xs rounded-full bg-surface-container-high border border-white/10 inline-block mb-space-md">
+              START A PROJECT
+            </span>
+            <h2 class="font-headline-xl text-3xl sm:text-headline-xl text-on-surface tracking-tight mb-space-md leading-tight">
+              Have a Business? <br>Let's Build Its Digital Future.
+            </h2>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-xl leading-relaxed">
+              Tell us about your idea, and let's create a website that represents your business at its absolute best. We review inquiries within 24 business hours.
+            </p>
+
+            <!-- Direct Quick-Actions -->
+            <div class="space-y-space-md">
+              
+              <!-- WhatsApp Quick Action -->
+              <a class="p-space-lg rounded-xl bg-surface-container-low border border-white/5 flex items-center justify-between group hover:bg-surface-container hover:border-tertiary/40 transition-all shadow-md" 
+                 data-action="whatsapp" 
+                 href="https://wa.me/15550192834" 
+                 rel="noopener noreferrer" 
+                 target="_blank">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center border border-tertiary/20">
+                    <span class="material-symbols-outlined text-[20px]">chat</span>
+                  </div>
+                  <div>
+                    <div class="font-headline-md text-headline-md text-on-surface text-[15px] font-semibold">Chat on WhatsApp</div>
+                    <div class="font-body-sm text-body-sm text-on-surface-variant">Instant messenger concierge</div>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-tertiary text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+
+              <!-- Direct Email Quick Action -->
+              <a class="p-space-lg rounded-xl bg-surface-container-low border border-white/5 flex items-center justify-between group hover:bg-surface-container hover:border-primary/40 transition-all shadow-md" 
+                 data-action="email" 
+                 href="mailto:inquiries@webcorestudios.io">
+                <div class="flex items-center gap-space-md">
+                  <div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center border border-primary/20">
+                    <span class="material-symbols-outlined text-[20px]">mail</span>
+                  </div>
+                  <div>
+                    <div class="font-headline-md text-headline-md text-on-surface text-[15px] font-semibold">Email Direct</div>
+                    <div class="font-body-sm text-body-sm text-on-surface-variant" data-bind="agency-email">inquiries@webcorestudios.io</div>
+                  </div>
+                </div>
+                <span class="material-symbols-outlined text-primary text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Multi-Field Project Inquiry Form -->
+          <div class="lg:col-span-7 reveal reveal-delay-1">
+            <div class="p-space-xl lg:p-space-2xl rounded-xl bg-surface-container-low/70 border border-white/10 backdrop-blur-xl shadow-2xl">
+              
+              <form class="space-y-space-md" id="inquiryForm" novalidate>
+                
+                <!-- Row 1: Name & Email -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                  <div>
+                    <label for="clientName" class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs">
+                      Your Name <span class="text-tertiary">*</span>
+                    </label>
+                    <input id="clientName" 
+                           class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest border border-white/10 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors" 
+                           placeholder="e.g. Dr. Sandesh K." 
+                           required 
+                           type="text">
+                  </div>
+                  <div>
+                    <label for="clientEmail" class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs">
+                      Business Email <span class="text-tertiary">*</span>
+                    </label>
+                    <input id="clientEmail" 
+                           class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest border border-white/10 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors" 
+                           placeholder="name@company.com" 
+                           required 
+                           type="email">
+                  </div>
+                </div>
+
+                <!-- Row 2: Business Name & Service -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+                  <div>
+                    <label for="clientBusiness" class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs">
+                      Business / Practice Name <span class="text-tertiary">*</span>
+                    </label>
+                    <input id="clientBusiness" 
+                           class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest border border-white/10 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors" 
+                           placeholder="e.g. Apex Health Clinic" 
+                           required 
+                           type="text">
+                  </div>
+                  <div>
+                    <label for="clientService" class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs">
+                      Service Required
+                    </label>
+                    <select id="clientService" 
+                            class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest border border-white/10 text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors">
+                      <option value="New Custom Website">New Custom Website</option>
+                      <option value="Website Redesign & Optimization">Website Redesign &amp; Optimization</option>
+                      <option value="Clinic / Healthcare Web Presence">Clinic / Healthcare Web Presence</option>
+                      <option value="Dental / Surgical Practice Website">Dental / Surgical Practice Website</option>
+                      <option value="Tailored Digital Consultation">Other / Tailored Consultation</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Scope / Project Details -->
+                <div>
+                  <label for="clientScope" class="block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-xs">
+                    Project Scope &amp; Target Launch <span class="text-tertiary">*</span>
+                  </label>
+                  <textarea id="clientScope" 
+                            class="w-full px-space-md py-space-sm rounded-lg bg-surface-container-lowest border border-white/10 text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary transition-colors" 
+                            placeholder="Tell us about your objectives, current pain points, and ideal timeline..." 
+                            required 
+                            rows="4"></textarea>
+                </div>
+
+                <!-- Error Notice -->
+                <div id="formError" class="hidden p-space-md rounded-lg bg-error-container/40 border border-error/30 text-error font-body-sm text-body-sm"></div>
+
+                <!-- Submit Button -->
+                <button class="w-full py-space-md rounded-full bg-gradient-to-r from-primary to-secondary-container text-on-primary font-label-md text-label-md uppercase tracking-wider shadow-lg hover:shadow-[0_0_30px_rgba(173,198,255,0.4)] transition-all duration-300 flex items-center justify-center gap-space-sm focus:outline-none" 
+                        type="submit">
+                  <span>Send Project Inquiry</span>
+                  <span class="material-symbols-outlined text-[18px]">north_east</span>
+                </button>
+              </form>
+
+              <!-- Success Notification State -->
+              <div id="formSuccess" class="hidden mt-space-md p-space-lg rounded-xl bg-surface-container border border-tertiary/40 text-on-surface font-body-sm text-body-sm">
+                <div class="flex items-center gap-2 text-tertiary font-headline-md text-lg mb-2">
+                  <span class="material-symbols-outlined text-[24px]">verified</span>
+                  <span>Inquiry Transmitted Successfully</span>
+                </div>
+                <p class="text-on-surface-variant mb-4 leading-relaxed">
+                  Thank you! Your project details have been logged. Our lead designer and technical director will review your requirements and reach out within 24 business hours.
+                </p>
+                <div class="p-3 rounded-lg bg-surface-container-lowest border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                  <div>
+                    <div class="font-label-sm text-xs text-on-surface uppercase">Need an Immediate Consultation?</div>
+                    <div class="text-xs text-on-surface-variant">Connect directly with our concierge team.</div>
+                  </div>
+                  <a class="px-4 py-1.5 rounded-full bg-tertiary/15 text-tertiary border border-tertiary/30 text-xs font-label-sm uppercase tracking-wider hover:bg-tertiary/25 transition-colors" 
+                     data-action="whatsapp" 
+                     href="https://wa.me/15550192834" 
+                     target="_blank" 
+                     rel="noopener noreferrer">
+                    Open WhatsApp ↗
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="w-full bg-surface-container-lowest py-space-3xl relative border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-xl mb-space-3xl">
+        
+        <!-- Brand Summary -->
+        <div class="lg:col-span-1">
+          <a class="flex items-center gap-space-sm mb-space-md" href="#">
+            <span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+            <span class="font-headline-md text-headline-md tracking-tight text-on-surface uppercase font-bold">WEBCORE</span>
+          </a>
+          <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-lg">
+            Pioneering digital architecture, tactile creative technologies, and brand experiences calibrated for visionary practices worldwide.
+          </p>
+          <div class="flex items-center gap-space-sm font-label-sm text-label-sm text-tertiary">
+            <span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+            <span>AVAILABLE FOR Q3/Q4 COMMISSIONS</span>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface block mb-space-lg">Navigation</span>
+          <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="hover:text-on-surface transition-colors" href="#">Home Overview</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="#services">Services &amp; Capabilities</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="#portfolio">Selected Work</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="#about">Studio Philosophy</a></li>
+            <li><a class="hover:text-on-surface transition-colors" href="#contact">Initiate Project</a></li>
+          </ul>
+        </div>
+
+        <!-- Capabilities -->
+        <div>
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface block mb-space-lg">Capabilities</span>
+          <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+            <li><span>Healthcare &amp; Clinic Portals</span></li>
+            <li><span>Dental Surgery Websites</span></li>
+            <li><span>Women's Clinic Platforms</span></li>
+            <li><span>Conversion Optimization</span></li>
+            <li><span>Lighthouse Performance Engineering</span></li>
+          </ul>
+        </div>
+
+        <!-- Connect -->
+        <div>
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface block mb-space-lg">Connect</span>
+          <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+            <li>
+              <a class="hover:text-on-surface transition-colors flex items-center gap-space-xs" 
+                 data-action="email" 
+                 href="mailto:inquiries@webcorestudios.io">
+                <span class="material-symbols-outlined text-[16px]">mail</span> 
+                <span data-bind="agency-email">inquiries@webcorestudios.io</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-on-surface transition-colors flex items-center gap-space-xs" 
+                 data-action="whatsapp" 
+                 href="https://wa.me/15550192834" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                <span class="material-symbols-outlined text-[16px]">chat</span> 
+                <span>WhatsApp Concierge</span>
+              </a>
+            </li>
+            <li>
+              <span class="block text-on-surface-variant mt-space-sm font-label-sm text-label-sm uppercase tracking-wider">
+                Zurich / New York / Tokyo
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Signals -->
+        <div>
+          <span class="font-label-md text-label-md uppercase tracking-wider text-on-surface block mb-space-lg">Signals</span>
+          <ul class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant">
+            <li>
+              <a class="hover:text-on-surface transition-colors flex items-center justify-between" href="https://awwwards.com" target="_blank" rel="noopener noreferrer">
+                <span>Awwwards Site of the Year</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-on-surface transition-colors flex items-center justify-between" href="https://thefwa.com" target="_blank" rel="noopener noreferrer">
+                <span>FWA of the Month</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-on-surface transition-colors flex items-center justify-between" href="https://read.cv" target="_blank" rel="noopener noreferrer">
+                <span>Read.cv / Registry</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+            </li>
+            <li>
+              <a class="hover:text-on-surface transition-colors flex items-center justify-between" href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <span>GitHub Open Source</span>
+                <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Copyright Sub-Footer -->
+      <div class="pt-space-xl border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+        <div class="flex items-center gap-space-lg flex-wrap justify-center md:justify-start">
+          <span>&copy; <span data-bind="agency-year">2026</span> <span data-bind="agency-legal">WEBCORE STUDIOS GMBH</span>. ALL RIGHTS RESERVED.</span>
+          <span class="hidden md:inline">/</span>
+          <span class="text-tertiary">CRAFTED FOR IMMERSION</span>
+        </div>
+        <div class="flex items-center gap-space-lg">
+          <a class="hover:text-on-surface transition-colors" href="#">Privacy Framework</a>
+          <a class="hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+          <a class="hover:text-on-surface transition-colors" href="#">Colophon</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- INTERACTIVE PROJECT DETAIL MODAL DIALOG -->
+  <div id="projectModal" 
+       class="modal-backdrop fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto" 
+       role="dialog" 
+       aria-modal="true" 
+       aria-label="Project Case Study Details">
+    
+    <div class="modal-dialog relative w-full max-w-4xl max-h-[90vh] bg-surface-container-lowest border border-white/15 rounded-2xl shadow-2xl flex flex-col overflow-hidden my-auto">
+      
+      <!-- Modal Top Bar -->
+      <div class="px-6 py-4 bg-surface-container-high/90 border-b border-white/10 flex items-center justify-between backdrop-blur-md">
+        <div class="flex items-center gap-2">
+          <button id="modalPrevBtn" class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors" title="Previous Project" aria-label="Previous Project">
+            <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+          </button>
+          <button id="modalNextBtn" class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors" title="Next Project" aria-label="Next Project">
+            <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+          </button>
+          <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant ml-2">Project Case Study</span>
+        </div>
+        <button id="modalCloseBtn" class="w-9 h-9 rounded-full bg-surface-container hover:bg-error/20 hover:text-error text-on-surface flex items-center justify-center transition-colors focus:outline-none" aria-label="Close dialog">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </div>
+
+      <!-- Modal Body (Dynamic Injection via main.js) -->
+      <div id="modalDynamicContent" class="p-6 sm:p-8 overflow-y-auto max-h-[calc(90vh-70px)]"></div>
+
+    </div>
+  </div>
+
+  <!-- FLOATING CONCIERGE WHATSAPP ACTION PILL -->
+  <a class="floating-whatsapp fixed bottom-6 right-6 z-40 flex items-center gap-2 px-4 py-3 rounded-full bg-surface-container-high/90 backdrop-blur-md text-tertiary border border-tertiary/40 shadow-2xl group hover:bg-surface-container focus:outline-none focus:ring-2 focus:ring-tertiary" 
+     data-action="whatsapp" 
+     href="https://wa.me/15550192834" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Instant WhatsApp Concierge">
+    <span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse shadow-[0_0_8px_#06B6D4]"></span>
+    <span class="font-label-sm text-xs uppercase tracking-wider font-semibold text-on-surface group-hover:text-tertiary transition-colors">WhatsApp Concierge</span>
+    <span class="material-symbols-outlined text-[18px]">chat</span>
+  </a>
+
+  <!-- SCROLL TO TOP FLOATING BUTTON -->
+  <button id="scrollTopBtn" 
+          class="scroll-top-btn fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-surface-container-low/90 backdrop-blur-md text-on-surface-variant hover:text-on-surface border border-white/10 hover:border-primary/40 flex items-center justify-center shadow-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary" 
+          aria-label="Scroll to top of page">
+    <span class="material-symbols-outlined text-[20px]">arrow_upward</span>
+  </button>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="assets/js/agency-config.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
